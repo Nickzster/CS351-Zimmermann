@@ -1,13 +1,9 @@
-has_access(X,library):-student(X).
-has_access(X,library):-faculty(X).
-has_access(X,library):-has_access(Y,library),parent(Y,X).
-faculty(jane).
-faculty(james).
-student(betty).
-student(george).
-parent(jane,karen).
-parent(jane,robin).
-parent(susan,tommy).
-parent(tommy,louise).
-parent(karen,paul).
-parent(karen,mimi).
+cost(cornflakes, 2).
+cost(coffee, 3).
+cost(chocolate, 5).
+cost(crisps, 12).
+total_cost([], 0).
+total_cost([Item|Rest], Cost) :-
+ cost(Item, ItemCost),
+ total_cost(Rest, CostOfRest),
+ Cost is ItemCost + CostOfRest.
