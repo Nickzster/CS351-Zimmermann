@@ -1,0 +1,13 @@
+has_access(X,library):-student(X).
+has_access(X,library):-faculty(X).
+has_access(X,library):-has_access(Y,library),parent(Y,X).
+faculty(jane).
+faculty(james).
+student(betty).
+student(george).
+parent(jane,karen).
+parent(jane,robin).
+parent(susan,tommy).
+parent(tommy,louise).
+parent(karen,paul).
+parent(karen,mimi).
