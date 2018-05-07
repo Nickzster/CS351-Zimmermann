@@ -67,212 +67,212 @@
 (defun letterToNATO (N)
    (cond 
 	   (
-			(equal N '(A))
+			(eql N 'A)
 			'(Alfa)
 	   )
 	   (
-			(equal N '(B))
+			(eql N 'B)
 			'(Bravo)
 	   )
 	   (
-			(equal N '(C))
+			(eql N 'C)
 			'(Charlie)
 	   )
 	   (
-			(equal N '(D))
+			(eql N 'D)
 			'(Delta)
 	   )
 	   (
-			(equal N '(E))
+			(eql N 'E)
 			'(Echo)
 	   )
 		  (
-			(equal N '(F))
+			(eql N 'F)
 			'(Foxtrot)
 	   )
 		  (
-			(equal N '(G))
+			(eql N 'G)
 			'(Golf)
 	   )
 		  (
-			(equal N '(H))
+			(eql N 'H)
 			'(Hotel)
 	   )
 		  (
-			(equal N '(I))
+			(eql N 'I)
 			'(India)
 	   )
 		  (
-			(equal N '(J))
+			(eql N 'J)
 			'(Juliet)
 	   )
 		  (
-			(equal N '(K))
+			(eql N 'K)
 			'(Kilo)
 	   )
 		  (
-			(equal N '(L))
+			(eql N 'L)
 			'(Lima)
 	   )
 		  (
-			(equal N '(M))
+			(eql N 'M)
 			'(Mike)
 	   )
 		  (
-			(equal N '(N))
+			(eql N 'N)
 			'(November)
 	   )
 		  (
-			(equal N '(O))
+			(eql N 'O)
 			'(Oscar)
 	   )
 		  (
-			(equal N '(P))
+			(eql N 'P)
 			'(Papa)
 	   )
 		  (
-			(equal N '(Q))
+			(eql N 'Q)
 			'(Quebec)
 	   )
 		  (
-			(equal N '(R))
+			(eql N 'R)
 			'(Romeo)
 	   )
 		  (
-			(equal N '(S))
+			(eql N 'S)
 			'(Sierra)
 	   )
 		  (
-			(equal N '(T))
+			(eql N 'T)
 			'(Tango)
 	   )
 		  (
-			(equal N '(U))
+			(eql N 'U)
 			'(Uniform)
 	   )
 	   (
-			(equal N '(V))
+			(eql N 'V)
 			'(Victor)
 	   )
 	   (
-			(equal N '(W))
+			(eql N 'W)
 			'(Whiskey)
 	   )
 	   (
-			(equal N '(X))
+			(eql N 'X)
 			'(Xray)
 	   )
 	   (
-			(equal N '(Y))
+			(eql N 'Y)
 			'(Yankee)
 	   )
 	   (
-			(equal N '(Z))
+			(eql N 'Z)
 			'(Zulu)
 	   )
    )
 )
-
+.
 (defun NATOToLetter (N)
 	(cond
 		(
-			(equal N '(ALFA))
+			(eql N '(ALFA))
 			'(A)
 		)
 		(
-			(equal N '(BRAVO))
+			(eql N '(BRAVO))
 			'(B)
 		)
 		(
-			(equal N '(CHARLIE))
+			(eql N '(CHARLIE))
 			'(C)
 		)
 		(
-			(equal N '(DELTA))
+			(eql N '(DELTA))
 			'(D)
 		)
 		(
-			(equal N '(ECHO))
+			(eql N '(ECHO))
 			'(E)
 		)
 		(
-			(equal N '(FOXTROT))
+			(eql N '(FOXTROT))
 			'(F)
 		)
 		(
-			(equal N '(GOLF))
+			(eql N '(GOLF))
 			'(G)
 		)
 		(
-			(equal N '(HOTEL))
+			(eql N '(HOTEL))
 			'(H)
 		)
 		(
-			(equal N '(INDIA))
+			(eql N '(INDIA))
 			'(I)
 		)
 		(
-			(equal N '(J))
+			(eql N '(J))
 			'(JULIET)
 		)
 		(
-			(equal N '(KILO))
+			(eql N '(KILO))
 			'(K)
 		)
 		(
-			(equal N '(MIKE))
+			(eql N '(MIKE))
 			'(M)
 		)
 		(
-			(equal N '(NOVEMBER))
+			(eql N '(NOVEMBER))
 			'(N)
 		)
 		(
-			(equal N '(OSCAR))
+			(eql N '(OSCAR))
 			'(O)
 		)
 		(
-			(equal N '(PAPA))
+			(eql N '(PAPA))
 			'(P)
 		)
 		(
-			(equal N '(QUEBEC))
+			(eql N '(QUEBEC))
 			'(Q)
 		)
 		(
-			(equal N '(ROMEO))
+			(eql N '(ROMEO))
 			'(R)
 		)
 		(
-			(equal N '(SIERRA))
+			(eql N '(SIERRA))
 			'(S)
 		)
 		(
-			(equal N '(TANGO))
+			(eql N '(TANGO))
 			'(T)
 		)
 		(
-			(equal N '(UNIFORM))
+			(eql N '(UNIFORM))
 			'(U)
 		)
 		(
-			(equal N '(VICTOR))
+			(eql N '(VICTOR))
 			'(V)
 		)
 		(
-			(equal N '(WHISKEY))
+			(eql N '(WHISKEY))
 			'(W)
 		)
 		(
-			(equal N '(XRAY))
+			(eql N '(XRAY))
 			'(X)
 		)
 		(
-			(equal N '(YANKEE))
+			(eql N '(YANKEE))
 			'(Y)
 		)
 		(
-			(equal N '(ZULU))
+			(eql N '(ZULU))
 			'(Z)
 		)
 	)
