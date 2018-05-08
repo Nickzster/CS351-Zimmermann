@@ -43,20 +43,23 @@
 
 (defun conve (liste)
 	(cond
-	(
-		(null liste)
-		liste
-	)
-	(
-		(atom liste)
-		(error "conve applies only to lists!")
-	)
-	(t
-		(append
-			(list (letterToNATO (list (car liste))))
-			(conve (cdr liste))
+		(
+			(null liste)
+			liste
 		)
-	)
+		(
+			(atom liste)
+			(error "conve applies only to lists!")
+		)
+		(t
+			;append needs to become a string.
+			(append 
+				(list (letterToNATO (list (car liste))))
+				(conve (cdr liste))
+			)
+	;	(concatenate 'string )
+		
+		)
 	)
 )
 
@@ -68,111 +71,111 @@
    (cond 
 	   (
 			(eql N 'A)
-			'(Alfa)
+			'Alfa
 	   )
 	   (
 			(eql N 'B)
-			'(Bravo)
+			'Bravo
 	   )
 	   (
 			(eql N 'C)
-			'(Charlie)
+			'Charlie
 	   )
 	   (
 			(eql N 'D)
-			'(Delta)
+			'Delta
 	   )
 	   (
 			(eql N 'E)
-			'(Echo)
+			'Echo
 	   )
 		  (
 			(eql N 'F)
-			'(Foxtrot)
+			'Foxtrot
 	   )
 		  (
 			(eql N 'G)
-			'(Golf)
+			'Golf
 	   )
 		  (
 			(eql N 'H)
-			'(Hotel)
+			'Hotel
 	   )
 		  (
 			(eql N 'I)
-			'(India)
+			'India
 	   )
 		  (
 			(eql N 'J)
-			'(Juliet)
+			'Juliet
 	   )
 		  (
 			(eql N 'K)
-			'(Kilo)
+			'Kilo
 	   )
 		  (
 			(eql N 'L)
-			'(Lima)
+			'Lima
 	   )
 		  (
 			(eql N 'M)
-			'(Mike)
+			'Mike
 	   )
 		  (
 			(eql N 'N)
-			'(November)
+			'November
 	   )
 		  (
 			(eql N 'O)
-			'(Oscar)
+			'Oscar
 	   )
 		  (
 			(eql N 'P)
-			'(Papa)
+			'Papa
 	   )
 		  (
 			(eql N 'Q)
-			'(Quebec)
+			'Quebec
 	   )
 		  (
 			(eql N 'R)
-			'(Romeo)
+			'Romeo
 	   )
 		  (
 			(eql N 'S)
-			'(Sierra)
+			'Sierra
 	   )
 		  (
 			(eql N 'T)
-			'(Tango)
+			'Tango
 	   )
 		  (
 			(eql N 'U)
-			'(Uniform)
+			'Uniform
 	   )
 	   (
 			(eql N 'V)
-			'(Victor)
+			'Victor
 	   )
 	   (
 			(eql N 'W)
-			'(Whiskey)
+			'Whiskey
 	   )
 	   (
 			(eql N 'X)
-			'(Xray)
+			'Xray
 	   )
 	   (
 			(eql N 'Y)
-			'(Yankee)
+			'Yankee
 	   )
 	   (
 			(eql N 'Z)
-			'(Zulu)
+			'Zulu
 	   )
    )
 )
-.
+
 (defun NATOToLetter (N)
 	(cond
 		(
