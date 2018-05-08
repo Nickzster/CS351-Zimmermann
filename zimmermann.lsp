@@ -1,44 +1,4 @@
-(defun helloWorld(list)
-	(setf list '(1 2 3))
-)
-
-(defun addTest (aList)
-	(cond
-	(
-		(null aList)
-		aList
-	)
-	(
-		(atom aList)
-		(error "add applies only to lists!")
-	)
-	(t
-		(append
-			(list (* (car aList) 2))
-			(addTest (cdr aList))
-		)
-	)
-	)
-)
-
-(defun myreverse (x)
-	(cond 
-		(
-			(null x) 
-			x
-		)
-		(
-			(atom x) 
-			(error "reverse applies only to lists")
-		)
-		(t 
-			(append 
-				(myreverse (cdr x)) 
-				(list (car x))
-			)
-		)
-	)
-)
+;Nick Zimmermann
 
 (defun conve (list) ;conve evaulates the entire statement.
 
@@ -85,9 +45,8 @@
 	)
 )
 
-;(defun convn (listn)
 
-;)
+
 
 (defun letterToNATO (N) ;letter to NATO matches the corresponding car symbol to its correct string representation.
    (cond 
@@ -201,108 +160,160 @@
    )
 )
 
+(defun convn (list) ;convn evaulates the entire statement.
+
+	(cond
+		(
+			(null list)
+			list
+		)
+		(
+			(atom list)
+			(error "conve has thrown an error!")
+		)
+		(t
+			(concatenate 'string
+				(convnUtility (car list)) 
+				(convn (cdr list)) 
+			)
+		)
+	)
+
+)
+
+(defun convnUtility (liste) ;convnUtility evalutes each sub-list. I know i could have used one of these utility functions, but I ran out of time.
+	(cond
+		(
+			(null liste)
+			liste
+		)
+		(
+			(atom liste)
+			(error "conveUtility has thrown an error!")
+		)
+		(t
+			;append needs to become a string.
+;			(append 
+;				(list (letterToNATO (list (car liste))))
+;				(conve (cdr liste))
+;			)
+		(concatenate 'string 
+			(NATOToLetter(car liste)) 
+			" " 
+			(convnUtility (cdr liste)))
+		)
+	)
+)
+
 (defun NATOToLetter (N)
 	(cond
 		(
-			(eql N '(ALFA))
-			'(A)
+			(eql N 'ALFA)
+			"A"
 		)
 		(
-			(eql N '(BRAVO))
-			'(B)
+			(eql N 'BRAVO)
+			"B"
 		)
 		(
-			(eql N '(CHARLIE))
-			'(C)
+			(eql N 'CHARLIE)
+			"C"
 		)
 		(
-			(eql N '(DELTA))
-			'(D)
+			(eql N 'DELTA)
+			"D"
 		)
 		(
-			(eql N '(ECHO))
-			'(E)
+			(eql N 'ECHO)
+			"E"
 		)
 		(
-			(eql N '(FOXTROT))
-			'(F)
+			(eql N 'FOXTROT)
+			"F"
 		)
 		(
-			(eql N '(GOLF))
-			'(G)
+			(eql N 'GOLF)
+			"G"
 		)
 		(
-			(eql N '(HOTEL))
-			'(H)
+			(eql N 'HOTEL)
+			"H"
 		)
 		(
-			(eql N '(INDIA))
-			'(I)
+			(eql N 'INDIA)
+			"I"
 		)
 		(
-			(eql N '(J))
-			'(JULIET)
+			(eql N 'J)
+			"J"
 		)
 		(
-			(eql N '(KILO))
-			'(K)
+			(eql N 'KILO)
+			"K"
 		)
 		(
-			(eql N '(MIKE))
-			'(M)
+			(eql N 'LIMA)
+			"L"
 		)
 		(
-			(eql N '(NOVEMBER))
-			'(N)
+			(eql N 'MIKE)
+			"M"
 		)
 		(
-			(eql N '(OSCAR))
-			'(O)
+			(eql N 'NOVEMBER)
+			"N"
 		)
 		(
-			(eql N '(PAPA))
-			'(P)
+			(eql N 'OSCAR)
+			"O"
 		)
 		(
-			(eql N '(QUEBEC))
-			'(Q)
+			(eql N 'PAPA)
+			"P"
 		)
 		(
-			(eql N '(ROMEO))
-			'(R)
+			(eql N 'QUEBEC)
+			"Q"
 		)
 		(
-			(eql N '(SIERRA))
-			'(S)
+			(eql N 'ROMEO)
+			"R"
 		)
 		(
-			(eql N '(TANGO))
-			'(T)
+			(eql N 'SIERRA)
+			"S"
 		)
 		(
-			(eql N '(UNIFORM))
-			'(U)
+			(eql N 'TANGO)
+			"T"
 		)
 		(
-			(eql N '(VICTOR))
-			'(V)
+			(eql N 'UNIFORM)
+			"U"
 		)
 		(
-			(eql N '(WHISKEY))
-			'(W)
+			(eql N 'VICTOR)
+			"V"
 		)
 		(
-			(eql N '(XRAY))
-			'(X)
+			(eql N 'WHISKEY)
+			"W"
 		)
 		(
-			(eql N '(YANKEE))
-			'(Y)
+			(eql N 'XRAY)
+			"X"
 		)
 		(
-			(eql N '(ZULU))
-			'(Z)
+			(eql N 'YANKEE)
+			"Y"
 		)
+		(
+			(eql N 'ZULU)
+			"Z"
+		)
+		(t
+			"<INVALID INPUT>"
+	    )
 	)
 
 )
