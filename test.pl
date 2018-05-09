@@ -22,14 +22,16 @@ likes(bob, golfing).
 likes(zack, videogames).
 likes(will, videogames).
 
+interests([tv,videogames]).
+
+test(will,[videogames,drinking]).
+test(nick,[videogames, tv]).
 
 /* People are compatible if their age is the same, they are not the same person, and they like the same thing */
 
-compatible(PersonA, PersonB) :- 
+compatible(PersonA, PersonB) :-  
 person(PersonA, X),
-person(PersonB, X), 
-likes(personA, Y),
-likes(personB, Y),
+person(PersonB, X),
+likes(PersonA, Y),
+likes(PersonB, Y),
 PersonA \= PersonB.
-
- 
