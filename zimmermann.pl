@@ -1,3 +1,5 @@
+% NICK ZIMMERMANN
+
 /* Departments - Not used in this version of the "prototype". */
 
 cs(cs111, cs211, cs311, cs315,cs343,cs436).
