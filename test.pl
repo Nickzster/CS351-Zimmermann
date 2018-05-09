@@ -11,7 +11,6 @@ age(will, 20).
 
 /* People are compatible if their age is the same. */
 
-compatible([],0).
 compatible(Name, Age) :-
 age(X, Y),
 age(Z, Y).
