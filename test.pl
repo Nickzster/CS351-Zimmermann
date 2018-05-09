@@ -40,7 +40,7 @@ compatible(PersonA, PersonB) :-
 person(PersonA, X),
 person(PersonB, X), 
 likes(personA, Y),
-likes(personB, Y).
-PersonA \= PersonB,
+likes(personB, Y),
+PersonA \= PersonB.
 
  
