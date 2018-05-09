@@ -28,5 +28,5 @@ compatible(PersonA, PersonB) :-
 person(PersonA, X),
 person(PersonB, X), 
 PersonA \= PersonB,
-gender(PersonA, X) \= gender(PersonB, X).
+gender(PersonA, Z), gender(personB,Z).
  
