@@ -1,4 +1,6 @@
-age(erika, 21). /* facts */
+/* Knowledge base */
+
+age(erika, 21). /* fact */
 age(christine, 22).
 age(tori, 20).
 age(sydney, 25).
@@ -11,7 +13,5 @@ age(will, 20).
 
 /* People are compatible if their age is the same. */
 
-compatible(Name, Age) :-
-age(X, Y),
-age(Z, Y).
+compatible(Name, Age) :- age(X,Y), age(Name, Y).
  
