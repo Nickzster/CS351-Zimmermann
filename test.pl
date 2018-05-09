@@ -1,17 +1,17 @@
 /* Knowledge base */
 
-age(erika, 21). /* fact */
-age(christine, 22).
-age(tori, 20).
-age(sydney, 25).
-age(maria, 22).
-age(nick, 22).
-age(clay, 27).
-age(bob, 25).
-age(zack, 21).
-age(will, 20).
+person(erika, 21). /* fact */
+person(christine, 22).
+person(tori, 20).
+person(sydney, 25).
+person(maria, 22).
+person(nick, 22).
+person(clay, 27).
+person(bob, 25).
+person(zack, 21).
+person(will, 20).
 
 /* People are compatible if their age is the same. */
 
-compatible(Name, Age) :- age(X,Y), age(Name, Y).
+compatible(PersonA, PersonB) :- person(PersonA,X),person(PersonB, X).
  
