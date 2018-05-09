@@ -10,8 +10,15 @@ person(clay, 27).
 person(bob, 25).
 person(zack, 21).
 person(will, 20).
+female(erika, christine, tori, sydney, maria).
+male(nick, clay, bob, zack, will).
 
 /* People are compatible if their age is the same., and they are not the same person. */
 
-compatible(PersonA, PersonB) :- person(PersonA,X),person(PersonB, X), PersonA \= PersonB.
+compatible(PersonA, PersonB) :- 
+person(PersonA,X),
+person(PersonB, X), 
+PersonA \= PersonB,
+male(PersonA) \= male(PersonB),
+female(PersonA) \= female(PersonB).
  
