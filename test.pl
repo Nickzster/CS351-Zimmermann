@@ -10,23 +10,23 @@ person(clay, 27).
 person(bob, 25).
 person(zack, 21).
 person(will, 20).
-female(erika).
-female(christine).
-female(tori).
-female(sydney).
-female(maria).
-male(nick).
-male(clay).
-male(bob).
-male(zack).
-male(will).
+gender(erika, female).
+gender(christine, female).
+gender(tori, female).
+gender(sydney, female).
+gender(maria, female).
+gender(nick, male).
+gender(clay, male).
+gender(bob, male).
+gender(zack, male).
+gender(will, male).
+
 
 /* People are compatible if their age is the same., they are not the same person, and they are not the same gender. */
 
 compatible(PersonA, PersonB) :- 
-person(PersonA,X),
+person(PersonA, X),
 person(PersonB, X), 
 PersonA \= PersonB,
-male(PersonA) \= male(PersonB),
-female(PersonA) \= female(PersonB).
+gender(PersonA, X) \= gender(PersonB, X).
  
