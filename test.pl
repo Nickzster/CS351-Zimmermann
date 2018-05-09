@@ -11,7 +11,7 @@ person(bob, 25).
 person(zack, 21).
 person(will, 20).
 
-/* People are compatible if their age is the same. */
+/* People are compatible if their age is the same., and they are not the same person. */
 
-compatible(PersonA, PersonB) :- person(PersonA,X),person(PersonB, X).
+compatible(PersonA, PersonB) :- person(PersonA,X),person(PersonB, X), PersonA \= PersonB.
  
